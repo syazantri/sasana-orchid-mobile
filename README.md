@@ -1,28 +1,36 @@
-<h2 align=center>Sasana Orchid Mobile 🌸✨</h2>
+# Sasana Orchid Mobile 🌸✨
 
 <details>
     <summary>Tugas 7🐣</summary>
-<h3> <samp> 1️⃣ Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?</h3>
+    
+### <samp> 1️⃣ Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?</h3>
 | STATELESS  | STATEFUL |
 | ------------- | ------------- |
 | Static | Dynamic |
 | Widget's statenya dipisahkan dari  | Bisa berubah sesuai event yang ditrigger oleh user |
-<h3> <samp> 2️⃣ Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.</h3>
-hgshga
-<h3> <samp> 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h3>
-usagsa
+### <samp> 2️⃣ Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.</h3>
+| Nama | Fungsi |
+| ------------- | ------------- |
+|  | Dynamic |
+### <samp> 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h3>
 <br>
 ✅ Membuat sebuah program Flutter baru dengan tema inventory seperti tugas-tugas sebelumnya.
 <br>
-    ```flutter create sasana_orchid``` pada folder tempat ingin menyimpan program Flutter, Lalu cd ke sasana_orchid.
+    ~~ ```flutter create sasana_orchid``` pada terminal pada folder tempat ingin menyimpan program Flutter, Lalu cd ke sasana_orchid. Buka vscode, buat file menu.dart, lalu pindahkan class MyHomePage dan _MyHomePageState dari main.dart ke menu.dart, lalu import file menu.dart pada main.dart. Setelah itu ubah sifat widget halaman menu menjadi stateless. Selanjutnya define tipe list untuk item-item yang akan dipakai, lalu dibuat listnya. Setelah itu return scaffold dan tambahkan widget untuk menampilkan card.
 <br>
 ✅ Membuat tiga tombol sederhana dengan ikon dan teks untuk:
 <br>
-    ~~  
+ Melihat daftar item (Lihat Item) <br>
+ Menambah item (Tambah Item) <br>
+ Logout (Logout) <br>
+    ~~ Define tipe pada list dulu dengan membuat suatu class, lalu tambahkan listnya.
 <br>
 ✅ Memunculkan Snackbar dengan tulisan:
 <br>
-    ~~ 
+ "Kamu telah menekan tombol Lihat Item" ketika tombol Lihat Item ditekan.<br>
+ "Kamu telah menekan tombol Tambah Item" ketika tombol Tambah Item ditekan.<br>
+ "Kamu telah menekan tombol Logout" ketika tombol Logout ditekan.<br>
+    ~~ Dengan menambahkan ScaffoldMessenger.of(context) padaa widget penampil card, lalu set context sesuai text yang diinginkan menyesuaiikan ${item.name}
 <br>
 ✅ Menjawab beberapa pertanyaan berikut pada README.md pada root folder.
 <br>
