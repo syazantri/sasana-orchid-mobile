@@ -1,19 +1,35 @@
 # Sasana Orchid Mobile 🌸✨
 
 <details>
-    <summary>Tugas 7🐣</summary>
+    <summary>Tugas 7 🐣</summary>
     
 ### <samp> 1️⃣ Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?</h3>
 | STATELESS  | STATEFUL |
 | ------------- | ------------- |
 | Static | Dynamic |
-| Widget's statenya dipisahkan dari  | Bisa berubah sesuai event yang ditrigger oleh user |
+| State tidak dapat diubah setelah dibuat karena state internal tidak disimpan | Bisa diubah kondisi internalnya karena state internal disimpan |
+| Untuk membuatnya tinggal pakai build | Ada StatefulWidget dan State, untuk memperbaruii statenya bisa setState() |
+| Contoh: Icon, IconButton, Text | Contoh: Checkbox, Radio, Slider, InkWell, Form, TextField |
 ### <samp> 2️⃣ Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.</h3>
 | Nama | Fungsi |
 | ------------- | ------------- |
-|  | Dynamic |
+| Scaffold | Dasar building block buat satu page |
+| SingleChildScrollView | Box dalam single widget yang bisa discroll  |
+| Padding | Memakaikan padding di antara child dan parentnya |
+| Column | Menampilkan child dalam bentuk vertikal |
+| Text | Menampilkan string |
+| Container | Dapat mengatur layout dan styling widget anaknya |
+| MaterialApp | Root widget yang menjadi kerangka seluruh app |
+| InkWell | Bisa respon kalo ditouch |
+| Icon | Mengatur tampilan icon yang diambil dari IconData |
+| Center | Membuat childnya berada di tengah |
+| GridView | Scrollable array 2D |
+| AppBar | Container yang nampilin konten dan aksi di paling atas app |
+| SnackBar | Mirip notif tapi di bagian bawah app |
+| ScaffoldMessenger | Manage SnackBar |
 ### <samp> 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h3>
 <br>
+
 ✅ Membuat sebuah program Flutter baru dengan tema inventory seperti tugas-tugas sebelumnya.
 <br>
     ~~ ```flutter create sasana_orchid``` pada terminal pada folder tempat ingin menyimpan program Flutter, Lalu cd ke sasana_orchid. Buka vscode, buat file menu.dart, lalu pindahkan class MyHomePage dan _MyHomePageState dari main.dart ke menu.dart, lalu import file menu.dart pada main.dart. Setelah itu ubah sifat widget halaman menu menjadi stateless. Selanjutnya define tipe list untuk item-item yang akan dipakai, lalu dibuat listnya. Setelah itu return scaffold dan tambahkan widget untuk menampilkan card.
