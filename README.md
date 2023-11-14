@@ -66,13 +66,20 @@
     <summary>Tugas 8 - Flutter Navigation, Layouts, Forms, and Input Elements🦜</summary>
     
 ### <samp> 1️⃣ Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+Navigator.push() dan Navigator.pushReplacement() sama-sama menambahkan route yang akan ditampilkan ke pengguna, bedanya kalau Navigator.push() itu karena dia hanya menambahkan, tidak menghapus route sebelumnya, pengguna akan dapat kembali ke halaman sebelumnya, sedangkan kalau Navigator.pushReplacement(), pengguna tidak dapat kembali pada route sebelumnya karena telah dihapus dan digantikan oleh route yyang baru.
 ### <samp> 2️⃣ Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
 ### <samp> 3️⃣ Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+- 
+
 ### <samp> 4️⃣ Bagaimana penerapan clean architecture pada aplikasi Flutter?
 ### <samp> 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
 ✅  Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru dengan ketentuan sebagai berikut:
 <br>
-~~ ✅ Memakai minimal tiga elemen input, yaitu name, amount, description. Tambahkan elemen input sesuai dengan model pada aplikasi tugas Django yang telah kamu buat.
+~~ 1. ✅ Memakai minimal tiga elemen input, yaitu name, amount, description. Tambahkan elemen input sesuai dengan model pada aplikasi tugas Django yang telah kamu buat.
+~~ 2. ✅ Memiliki sebuah tombol Save.
+~~ 3. ✅ Setiap elemen input di formulir juga harus divalidasi dengan ketentuan sebagai berikut: Setiap elemen input tidak boleh kosong.
+ Setiap elemen input harus berisi data dengan tipe data atribut modelnya.
 <br>
 ✅ Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama.
 <br>
@@ -83,7 +90,9 @@
     ~~ 
 <br>
 ✅ Membuat sebuah drawer pada aplikasi dengan ketentuan sebagai berikut:
-    ~~ 
+~~ 1. ✅ Drawer minimal memiliki dua buah opsi, yaitu Halaman Utama dan Tambah Item.
+~~ 2. ✅ Ketika memiih opsi Halaman Utama, maka aplikasi akan mengarahkan pengguna ke halaman utama.
+~~ 3. ✅ Ketika memiih opsi (Tambah Item), maka aplikasi akan mengarahkan pengguna ke halaman form tambah item baru.
 <br>
 ✅ Menjawab beberapa pertanyaan berikut pada README.md pada root folder.
 <br>
