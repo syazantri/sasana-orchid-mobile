@@ -1,7 +1,7 @@
 # Sasana Orchid Mobile 🌸✨
 
 <details>
-    <summary>Tugas 7 🐣</summary>
+    <summary>Tugas 7 - Elemen Dasar Flutter🐣</summary>
     
 ### <samp> 1️⃣ Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?</h3>
 | STATELESS  | STATEFUL |
@@ -27,7 +27,7 @@
 | AppBar | Container yang nampilin konten dan aksi di paling atas app |
 | SnackBar | Mirip notif tapi di bagian bawah app |
 | ScaffoldMessenger | Manage SnackBar |
-### <samp> 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h3>
+### <samp> 3️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h3>
 <br>
 
 ✅ Membuat sebuah program Flutter baru dengan tema inventory seperti tugas-tugas sebelumnya.
@@ -59,5 +59,38 @@
   Lalu ```git pull origin master --allow-unrelated-histories``` karena waktu pull biasa ada error unrelated history.
   Lalu ```git add .``` untuk mendaftarkan perubahan yang telah dibuat di local, ```git commit -m "tugas 7 done code"```, dan
   terakhir ```git push --set-upstream origin master``` karena ini merupakan push pertama kali.
+<br>
+</details>
+
+<details>
+    <summary>Tugas 8 - Flutter Navigation, Layouts, Forms, and Input Elements🦜</summary>
+    
+### <samp> 1️⃣ Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+### <samp> 2️⃣ Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+### <samp> 3️⃣ Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+### <samp> 4️⃣ Bagaimana penerapan clean architecture pada aplikasi Flutter?
+### <samp> 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+✅  Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru dengan ketentuan sebagai berikut:
+<br>
+~~ ✅ Memakai minimal tiga elemen input, yaitu name, amount, description. Tambahkan elemen input sesuai dengan model pada aplikasi tugas Django yang telah kamu buat.
+<br>
+✅ Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama.
+<br>
+    ~~ 
+<br>
+✅ Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru.
+<br>
+    ~~ 
+<br>
+✅ Membuat sebuah drawer pada aplikasi dengan ketentuan sebagai berikut:
+    ~~ 
+<br>
+✅ Menjawab beberapa pertanyaan berikut pada README.md pada root folder.
+<br>
+    ~~ Inilah readme saya yeay🥳
+<br>
+✅ Melakukan add-commit-push ke GitHub.
+<br>
+    ~~ Seperti biasa, tinggal memasukkan command ```git add .```, ```git commit -m "done tugas 7"```, dan ```git push``` ke terminal.
 <br>
 </details>
