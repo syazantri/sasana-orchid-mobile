@@ -68,32 +68,104 @@
 ### <samp> 1️⃣ Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
 Navigator.push() dan Navigator.pushReplacement() sama-sama menambahkan route yang akan ditampilkan ke pengguna, bedanya kalau Navigator.push() itu karena dia hanya menambahkan, tidak menghapus route sebelumnya, pengguna akan dapat kembali ke halaman sebelumnya, sedangkan kalau Navigator.pushReplacement(), pengguna tidak dapat kembali pada route sebelumnya karena telah dihapus dan digantikan oleh route yyang baru.
 ### <samp> 2️⃣ Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+Ada tiga tipe layout widget pada flutter, yaitu single child layout widget, multi child layout widget, dan sliver widget. 
+Beberapa yang termasuk single child layout widget (hanya bisa memiliki 1 child):
+| Nama | Fungsi |
+| ------------- | ------------- |
+| Align | Meng-align childnya dengan dirinya |
+| AspectRatio | Memberi ukuran spesifik pada widget |
+| Baseline | Container yang memposisikan childnya di baseline |
+| Center | Membuat childnya berada di tengah |
+| ConstrainedBox | Membuuat constraint pada childnya |
+| Container | Dapat mengatur layout dan styling widget anaknya |
+| Expanded | Memperluas row, column, dan flex dari child |
+| FittedBox | Memposisikan child dengan dirinya |
+| Padding | Memakaikan padding di antara child dan parentnya |
+| SizedBox | Box yaang punya size spesifik yang memaksa childnya mengikuti ukurannya |
+
+Beberapa yang termasuk multi child layout widget (bisa memiliki banyak child):
+| Nama | Fungsi |
+| ------------- | ------------- |
+| Column | Menampilkan child dalam bentuk vertikal |
+| GridView | Scrollable array 2D |
+| ListView | Scrollable linear list widget |
+| Row | List widget dalam bentuk horizontal |
+| Table | Menampilkan child widget dalam baris dan kolom |
+| Wrap | Menampilkan childnya dalam multiple horizontal |
+
+Beberapa yang termasuk sliver widget (scrollable widget):
+| Nama | Fungsi |
+| ------------- | ------------- |
+| CustomScrollView | Box dalam single widget yang bisa discroll |
+| SliverPadding | Memakaikan padding antar sliver |
+| SliverList | Menempatkan banyak box sebagai child ke dalam linear array |
+<br> 
+lebih lengkapnya ada di sini https://docs.flutter.dev/ui/widgets/layout
 
 ### <samp> 3️⃣ Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
-- 
+Ada TextFormField yang dipakai karena buat nama, harga, daaan deskripsi item (short text input).
 
 ### <samp> 4️⃣ Bagaimana penerapan clean architecture pada aplikasi Flutter?
+Clean architecture adalah konsep separation of concern biar biisa modular, scalable, dan testable codebase. Penerapan clean architecture pada aplikasi flutter dapat dilakukan dengan menerapkan 3 layer, yaitu Presentation Layer (UI), Domain Layer (Business Logic), dan data layer. Presentation Layer isinya komponen-komponen UI yang diusahakan terpisah dengan implementasi detail-detail business logic dan data. Domain layer berisi apa-apa saja yang dapat dilakukan di aplikasi. Lalu yang terakhir sesuai namanya, daata layer akan mengatur resource data dalam aplikasi.
+
 ### <samp> 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
 ✅  Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru dengan ketentuan sebagai berikut:
+ans: buat file baru namanya sasana_form.dart
+<br> 
+~~ 1. ✅ Memakai minimal tiga elemen input, yaitu name, amount, description. Tambahkan elemen input sesuai dengan model pada aplikasi tugas Django yang telah kamu buat. 
 <br>
-~~ 1. ✅ Memakai minimal tiga elemen input, yaitu name, amount, description. Tambahkan elemen input sesuai dengan model pada aplikasi tugas Django yang telah kamu buat.
+ans: buat variabel dulu di awal sesuai elemen input yang diinginkan yaitu name, amount, dan description. Lalu buat TextFormField sebagai elemen untuk menginput data yang diperlukan.
+<br>
 ~~ 2. ✅ Memiliki sebuah tombol Save.
+<br>
+ans: Buat ElevatedButton, lalu tambahkan child text save.
+<br>
 ~~ 3. ✅ Setiap elemen input di formulir juga harus divalidasi dengan ketentuan sebagai berikut: Setiap elemen input tidak boleh kosong.
  Setiap elemen input harus berisi data dengan tipe data atribut modelnya.
 <br>
+ans: dibuat validator: ```validator: (String? value) {
+                  if (value == null || value.isEmpty) {
+                    return "Deskripsi tidak boleh kosong!";
+                  }
+                  return null;
+                },
+                ```
+<br>
 ✅ Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama.
 <br>
-    ~~ 
+    ~~ tambahkaan kode ini ```if (item.name == "Tambah Item") {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ShopFormPage()));
+          }```
 <br>
 ✅ Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru.
 <br>
-    ~~ 
+    ~~ Pakai showdialog, sesuaikan data yang mau ditampilkan
 <br>
 ✅ Membuat sebuah drawer pada aplikasi dengan ketentuan sebagai berikut:
+<br>
+ans: buat file baru namanya left_drawer.dart
+<br>
 ~~ 1. ✅ Drawer minimal memiliki dua buah opsi, yaitu Halaman Utama dan Tambah Item.
+<br>
+ans: pakai ListTile untuk setiap opsi.
+<br>
 ~~ 2. ✅ Ketika memiih opsi Halaman Utama, maka aplikasi akan mengarahkan pengguna ke halaman utama.
+<br>
+ans: pakai materialpageroute ketika onTap: ```Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyHomePage(),
+                  ));```
+<br>
 ~~ 3. ✅ Ketika memiih opsi (Tambah Item), maka aplikasi akan mengarahkan pengguna ke halaman form tambah item baru.
 <br>
+ans: pakai materialpageroute ketika onTap: ```Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ShopFormPage(),
+                  ));```
+<br> 
 ✅ Menjawab beberapa pertanyaan berikut pada README.md pada root folder.
 <br>
     ~~ Inilah readme saya yeay🥳
