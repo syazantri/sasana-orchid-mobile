@@ -175,3 +175,39 @@ ans: pakai materialpageroute ketika onTap: ```Navigator.pushReplacement(
     ~~ Seperti biasa, tinggal memasukkan command ```git add .```, ```git commit -m "done tugas 7"```, dan ```git push``` ke terminal.
 <br>
 </details>
+
+<details>
+    <summary>Tugas 9 - Integrasi Layanan Web Django dengan Aplikasi Flutter🐬</summary>
+1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+    <br>
+2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+    <br>
+3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+    <br>
+4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+    <br>
+5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+    <br>
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+    <br>
+✅  Memastikan deployment proyek tugas Django kamu telah berjalan dengan baik.
+    <br>
+✅  Membuat halaman login pada proyek tugas Flutter.
+    <br>
+✅  Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.
+    <br>
+✅  Membuat model kustom sesuai dengan proyek aplikasi Django.
+    <br>
+✅  Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint JSON di Django yang telah kamu deploy.
+    <br>
+✅  Tampilkan name, amount, dan description dari masing-masing item pada halaman ini.
+    <br>
+✅  Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
+    <br>
+✅  Halaman ini dapat diakses dengan menekan salah satu item pada halaman daftar Item.
+    <br>
+✅  Tampilkan seluruh atribut pada model item kamu pada halaman ini.
+    <br>
+✅  Tambahkan tombol untuk kembali ke halaman daftar item.
+    <br>
+</details>
