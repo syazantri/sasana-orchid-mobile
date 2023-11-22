@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sasana_orchid/screens/sasana_form.dart';
+import 'package:sasana_orchid/screens/list_item.dart';
+import 'package:provider/provider.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
+import 'package:sasana_orchid/screens/login.dart';
 
 class ShopItem {
   final String name;
@@ -24,11 +28,12 @@ class ShopCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final request = context.watch<CookieRequest>();
     return Material(
       color: item.color,
       child: InkWell(
         // Area responsive terhadap sentuhan
-        onTap: () {
+        onTap: () async {
           // Memunculkan SnackBar ketika diklik
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
@@ -39,6 +44,27 @@ class ShopCard extends StatelessWidget {
           if (item.name == "Tambah Item") {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ShopFormPage()));
+          } else if (item.name == "Lihat Item") {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ItemPage()));
+          } else if (item.name == "Logout") {
+            final response = await request.logout(
+                "http://127.0.0.1:8000/auth/logout/");
+            String message = response["message"];
+            if (response['status']) {
+              String uname = response["username"];
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text("$message Sampai jumpa, $uname."),
+              ));
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text("$message"),
+              ));
+            }
           }
         },
         child: Container(
