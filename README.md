@@ -180,34 +180,27 @@ ans: pakai materialpageroute ketika onTap: ```Navigator.pushReplacement(
     <summary>Tugas 9 - Integrasi Layanan Web Django dengan Aplikasi Flutter🐬</summary>
 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
     <br>
+    ans : bisa tapi lebih rumit daripada membuat model sebelum melakukan pengambilan daja JSON.
+    <br>
 2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+    <br>
+    ans : membantu menghandle pengolahan cookie, instancenya perlu dibagikan ke semua komponen karena diperlukan untuk melihat data user di berbagai temlat, misal mengambil list item user.
     <br>
 3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
     <br>
+    ans : data json diambil dari proyek django (dengan menggunakan quicktype bisa mengubah format json di django menjadi dart) lalu diambil datanya dan didecode menjadi model yang sesuai lalu ditampilkan ke widget futurebuilder.
+    <br>
 4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+    <br>
+    ans : pakai library pbp_django_auth, input data yang ditulis di flutter bakal di post ke django, lalu diolah di views sana dan mereturn page lanjutan seharusnya.
     <br>
 5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
     <br>
+    ans : FutureBuilder untuk membuat widget secara async.
+    <br>
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
     <br>
-✅  Memastikan deployment proyek tugas Django kamu telah berjalan dengan baik.
-    <br>
-✅  Membuat halaman login pada proyek tugas Flutter.
-    <br>
-✅  Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.
-    <br>
-✅  Membuat model kustom sesuai dengan proyek aplikasi Django.
-    <br>
-✅  Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint JSON di Django yang telah kamu deploy.
-    <br>
-✅  Tampilkan name, amount, dan description dari masing-masing item pada halaman ini.
-    <br>
-✅  Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
-    <br>
-✅  Halaman ini dapat diakses dengan menekan salah satu item pada halaman daftar Item.
-    <br>
-✅  Tampilkan seluruh atribut pada model item kamu pada halaman ini.
-    <br>
-✅  Tambahkan tombol untuk kembali ke halaman daftar item.
+    Startapp authentication di proyek django, buat views untuk login, set url nya juga, terus di settings ditambahin middleware dan sesuatu yang dicopas dari tutorial. Lalu di proyek flutter, buat folder models yang isinya item.dart untuk menyimpan yang telah dibuat di quicktype, buat file login.dart, isi sesuai tutorial, buat list_item.dart juga. dan sesuaikan yang lainnya.
+✅  Memastikan deployment proyek tugas 
     <br>
 </details>
